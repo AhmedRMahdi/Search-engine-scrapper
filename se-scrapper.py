@@ -56,8 +56,6 @@ def bing_query(engine, *queries, **page):
 
 	return engine.format(' '.join(queries).replace(' ', '+'), link_start_number)
 
-print query('bing', 'hello world', page=10)
-print query('google', 'hello world', page=2)
 
 def get_url(url):
 	return requests.get(url, timeout=1)
