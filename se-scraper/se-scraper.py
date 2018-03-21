@@ -3,6 +3,8 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
+from user_agents import random_desktop_headers
+
 
 SEARCH_ENGINE = {
 	'google': 'https://www.google.co.uk/search?q={0}&start={1}',
@@ -58,7 +60,7 @@ def bing_query(engine, *queries, **page):
 
 
 def get_url(url):
-	return requests.get(url, timeout=1)
+	return requests.get(url, headers=random_desktop_headers(), timeout=1)
 
 
 def make_soup_obj(opened_link):
