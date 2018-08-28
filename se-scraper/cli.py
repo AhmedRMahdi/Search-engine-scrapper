@@ -5,7 +5,7 @@ import random
 
 from se_scraper import query, get_links
 
-from proxies.csvsaver import SaveToCSV
+from csvsaver import SaveToCSV
 
 
 
